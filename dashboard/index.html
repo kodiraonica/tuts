@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+         /* https://coolors.co/palette/ff9f1c-ffbf69-ffffff-cbf3f0-2ec4b6 */
+
+        body, html {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        aside {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            bottom: 0;
+            background-color: #292929;
+            padding-top: 100px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul a {
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header {
+            position: fixed;
+            left: 200px;
+            right: 0;
+            background-color: #cbf3f0;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: #000;
+            padding: 20px 20px 20px 5px;
+            width: 100%;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        ::placeholder {
+            color: #000;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            align-items: stretch;
+            height: 100vh;
+            margin-left: 200px;
+            padding-top: 100px;
+        }
+
+        .content {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background-color: #2ec4b6;
+            border-radius: 10px;
+            border: 2px dashed #000;
+        }
+
+        .content:first-child {
+            flex: 1.5;
+        }
+
+        @media screen and (max-width: 1000px){
+            main {
+                flex-direction: column;
+                margin-left: 0;
+                padding-top: 0;
+            }
+
+            aside {
+                position: relative;
+                width: 100%;
+                padding-top: 0;
+                padding: 20px;
+            }
+
+            ul {
+                padding: 0;
+            }
+
+            li {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+
+            header {
+                position: relative;
+                width: 100%;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </aside>
+
+    <header>
+        <span class="material-symbols-outlined">
+            search
+        </span>
+        <input type="search" placeholder="Search...">
+    </header>
+
+    <main>
+        <div class="content">
+        </div>
+
+        <div class="content">
+        </div>
+    </main>
+</body>
+</html>
