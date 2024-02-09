@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <style>
+        html, body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+            display: flex;
+            height: 100vh;
+        }
+
+        .content:first-child {
+            background-color: #392F5A;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .content:first-child section {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        button {
+            background-color: #5C527F;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+
+        .content:last-child {
+            background-color: #fff;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 100%;
+            background-color: #f4f4f4;
+            border: none;
+            padding: 0.7rem 0.5rem;
+            margin-bottom: 10px;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"] {
+            background-color: #392F5A;
+            color: white;
+            border: none;
+            padding: 0.7rem 0.5rem;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        form {
+            max-width: 400px;
+        }
+
+        @media screen and (max-width: 1000px){
+            main {
+                flex-direction: column;
+            
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content">
+            <section>
+                <h1>Dobro dosli!</h1>
+                <p> Kodiraonica je skola programiranja! Jeeej</p>
+                <button>Ulogiraj se</button>
+            </section>
+        </div>
+        <div class="content">
+           <section>
+                <form action="">
+                    <h2>Napravi racun</h2>
+                    <input type="text" placeholder="Tvoje ime...">
+                    <input type="pasword" placeholder="Tvoja lozinka...">
+                    <input type="email" placeholder="Tvoj mail...">
+                    <input type="submit" value="Napravi racun">
+                </form>
+           </section>
+        </div>
+    </main>
+</body>
+</html>
