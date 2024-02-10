@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .posts-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .post {
+            width: 300px;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="posts-container"></div>
+    <button>Učitaj još postova</button>
+
+    <script>
+        let page = 1;
+        const getPostsFromApi = async () => {
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=4&_page=${page}`);
+            const data = await res.json();
+            data.forEach(post => {
+                createPostInDOM(post);
+            });
+        }
+
+        const createPostInDOM = (post) => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            postElement.innerHTML = `
+                <h2>${post.title}</h2>
+                <p>${post.body}</p>
+            `;
+            document.querySelector('.posts-container').appendChild(postElement);
+        }
+
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', () => {
+            page++;
+            getPostsFromApi();
+        });
+
+        getPostsFromApi();
+    </script>
+</body>
+</html>
