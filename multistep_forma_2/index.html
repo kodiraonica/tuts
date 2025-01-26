@@ -7,62 +7,60 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=east,west" />
   <link rel="stylesheet" href="main.css">
   <title>Multistep forma | Kodiraonica</title>
 </head>
 
 <body>
   <form id="form">
-    <h1>Dobro došao!</h1>
-    <div class="form-step active">
-      <h4>Upiši svoje ime</h4>
-      <input type="text" name="name" id="name" placeholder="Ime">
-      <div class="button-wrapper">
+    <div class="form_step active">
+      <h2>Upiši svoje ime</h2>
+      <input type="text" name="name" placeholder="Ime">
+      <div class="button_wrapper flex-end">
         <button class="next">
           <span>Dalje</span>
-          <span class="emoji">
-            👉
-          </span>
+          <span class="emoji">👉</span>
         </button>
       </div>
     </div>
 
-    <div class="form-step">
-      <h4>Upiši svoje prezime</h4>
-      <input type="text" name="lastname" id="lastname" placeholder="Prezime">
-      <div class="button-wrapper">
+    <div class="form_step">
+      <h2>Upiši svoje prezime</h2>
+      <input type="text" name="lastName" placeholder="Prezime">
+      <div class="button_wrapper">
         <button class="prev">
           <span class="emoji">
             👈
           </span>
-          <span>Nazad</span></button>
+          <span>
+            Nazad
+          </span>
+        </button>
         <button class="next"> <span>Dalje</span>
-          <span class="emoji">
-            👉
-          </span> </button>
+          <span class="emoji">👉</span></button>
       </div>
     </div>
 
-    <div class="form-step">
-      <h4>Upiši svoj email</h4>
-
-      <input type="email" name="email" id="email" placeholder="Email">
-      <div class="button-wrapper">
-        <button class="prev">
-          <span class="emoji">
-            👈
-          </span> <span>Nazad</span> </button>
+    <div class="form_step">
+      <h2>Upiši svoj email</h2>
+      <input type="email" name="email" placeholder="Email">
+      <div class="button_wrapper">
+        <button class="prev"><span class="emoji">
+          👈
+        </span>
+        <span>
+          Nazad
+        </span>
+        </button>
         <button class="next" id="submit">
-          <span>Posalji</span>
-          <span class="emoji">
-            👌
-          </span>
-        </button>
+          <span>Pošalji</span>
+          <span class="emoji">👌</span>
         </button>
       </div>
     </div>
+    
   </form>
+ 
 
   <script src="main.js"></script>
 </body>
